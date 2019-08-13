@@ -31,16 +31,11 @@
     "singleQuote": true,
     "arrowParens": "always"
   },
-  "author": "Loic Mahieu",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SimeonC/react-emotion-flexboxgrid.git"
+    "url": "git+https://github.com/nicolaivasquez/react-emotion-flexboxgrid.git"
   },
-  "bugs": {
-    "url": "https://github.com/SimeonC/react-emotion-flexboxgrid/issues"
-  },
-  "homepage": "https://github.com/SimeonC/react-emotion-flexboxgrid",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -86,7 +81,7 @@
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-visualizer": "^0.3.1",
     "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1",
+    "webpack-dev-server": "^2.11.5",
     "webpack-hot-middleware": "^2.21.0"
   },
   "peerDependencies": {

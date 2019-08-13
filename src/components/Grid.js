@@ -8,17 +8,17 @@ const Grid = styled('div')`
   margin-left: auto;
   ${(gridProps) => {
     if (gridProps.fluid) {
-      return css`
-        padding-right: ${(props) => `${config(props).outerMargin}rem`};
-        padding-left: ${(props) => `${config(props).outerMargin}rem`};
+      return (props) => css`
+        padding-right: ${`${config(props).outerMargin}rem`};
+        padding-left: ${`${config(props).outerMargin}rem`};
       `;
     }
-    return css`
+    return (props) => css`
       ${DIMENSION_NAMES.map(
         (t) =>
           config(gridProps).container[t] &&
           config(gridProps).media[t]`
-        width: ${(props) => config(props).container[t]}rem;
+        width: ${config(props).container[t]}rem;
       `
       )};
     `;
