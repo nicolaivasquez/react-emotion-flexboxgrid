@@ -7,20 +7,22 @@ const Grid = styled('div')`
   margin-right: auto;
   margin-left: auto;
   ${(gridProps) => {
+    const { outerMargin, container, media } = config(gridProps);
     if (gridProps.fluid) {
       return css`
-        padding-right: ${(props) => `${config(props).outerMargin}rem`};
-        padding-left: ${(props) => `${config(props).outerMargin}rem`};
+        padding-right: ${outerMargin}rem;
+        padding-left: ${outerMargin}rem;
       `;
     }
+    const dimensions = DIMENSION_NAMES.map(
+      (t) =>
+        container[t] &&
+        media[t]`
+          width: ${container[t]}rem;
+        `
+    );
     return css`
-      ${DIMENSION_NAMES.map(
-        (t) =>
-          config(gridProps).container[t] &&
-          config(gridProps).media[t]`
-        width: ${(props) => config(props).container[t]}rem;
-      `
-      )};
+      ${dimensions};
     `;
   }};
 `;
